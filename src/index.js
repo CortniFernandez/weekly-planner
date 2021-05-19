@@ -1,6 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
+import List from './List.js';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <List day="mon"/>
+        <List day="tue"/>
+      </div>
+    )
+  }
+}
 
 ReactDOM.render(
   <App />,

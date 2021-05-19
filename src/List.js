@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class App extends React.Component {
+class List extends React.Component {
   constructor(props){
     super(props);
     var storedList = [];
+    const day = JSON.stringify(this.props.day) + 'list';
 
-    if (localStorage.getItem('list')) {
-      storedList = JSON.parse(localStorage.getItem('list'));
+    if (localStorage.getItem(day)) {
+      storedList = JSON.parse(localStorage.getItem(day));
     }
 
     this.state = {
@@ -35,7 +36,7 @@ class App extends React.Component {
 
     //add new item to list
     list.push(newItem);
-    localStorage.setItem('list', JSON.stringify(list));
+    localStorage.setItem(JSON.stringify(this.props.day) + 'list', JSON.stringify(list));
 
     //update state with new list and reset newItem input
     this.setState({
@@ -49,7 +50,7 @@ class App extends React.Component {
     const list = [...this.state.list];
     //filter out item being deleted
     const updatedList = list.filter(item => item.id !== id);
-    localStorage.setItem('list', JSON.stringify(updatedList));
+    localStorage.setItem(JSON.stringify(this.props.day) + 'list', JSON.stringify(updatedList));
     this.setState({list: updatedList});
   }
 
@@ -88,4 +89,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default List;
