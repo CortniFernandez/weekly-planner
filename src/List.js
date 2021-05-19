@@ -58,11 +58,11 @@ class List extends React.Component {
     return (
       <div className="App">
         <div>
-          Add an Item...
+          {this.props.day}
           <br/>
           <input
             type="text"
-            placeholder="type item here..."
+            placeholder="..."
             value={this.state.newItem}
             onChange={event => this.updateInput("newItem", event.target.value)}
           />
