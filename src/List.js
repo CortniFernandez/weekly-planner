@@ -58,7 +58,7 @@ class List extends React.Component {
     return (
       <div className="App">
         <div>
-          {this.props.day}
+          <h5 className="day-header">{this.props.day}</h5>
           <br/>
           <input
             type="text"
@@ -67,6 +67,7 @@ class List extends React.Component {
             onChange={event => this.updateInput("newItem", event.target.value)}
           />
           <button
+            className="add-btn"
             onClick={() => this.addItem()}
           >Add</button>
 
@@ -77,6 +78,7 @@ class List extends React.Component {
                 <li key={item.id}>
                   {item.value}
                   <button
+                    className="delete-btn"
                     onClick={() => this.deleteItem(item.id)}  
                   >X</button>
                 </li>
