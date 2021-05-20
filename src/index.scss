@@ -91,6 +91,7 @@ li {
   font-size: 14pt;
 }
 
+/* -------------------- column colors -------------------- */
 .monday {
   background: linear-gradient(to bottom, #CFF2E9, $transparent);
 }
@@ -133,6 +134,7 @@ li {
 .sunday .day-header, .sunday li {
   background-color: #C5CDE7;
 }
+/* ---------------------------------------------------------- */
 
 .bottom-border-div {
   border-top: 5px dotted $grey;
@@ -140,4 +142,18 @@ li {
   padding: 0.4em 1em;
   font-family:'Charmonman', cursive;
   font-size: 18pt;
+}
+footer {
+  color: $lightGrey;
+  position: fixed;
+  bottom: 5px;
+  left: 47%;
+}
+a {
+  text-decoration: none;
+  color: $lightGrey;
+  font-weight:bold;
+}
+a:hover {
+  color: $ink;
 }
